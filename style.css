@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  font-size: 15px;
+  color: #333;
+}
+
+.main-bg h4 {
+  color: #fff;
+}
+.main-bg button {
+  display: inline-block;
+}
+
+.btn-blue, .btn-red, .btn-green {
+  width: 200px;
+  height: 200px;
+  height: 20px;
+}
+
+.btn-green {
+  background-color: green;
+}
+.btn-green:hover {
+  background-color: #fff;
+}
+
+.btn-red {
+  background-color: red;
+}
+
+.btn-blue {
+  background-color: blue;
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 10px;
+  letter-spacing: -1px;
+}
+
+.homework_1 {
+  border: solid 1px #ccc;
+  width: 100px;
+}
+.homework_1 li {
+  list-style: none;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8666666667);
+  border-bottom: solid 1px #ccc;
+}
+.homework_1 li:hover {
+  background-color: blue;
+  color: #fff;
+}
+.homework_1 .active {
+  background-color: blue;
+  color: #fff;
+}
+.homework_1:last-child {
+  border-bottom: nopne;
+}
+
+.homewor_2 li:nth-child(1) {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: green;
+  background-color: #b1e9b1;
+}
+.homewor_2 li:nth-child(2) {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: blue;
+  background-color: #8787fd;
+}
+.homewor_2 li:nth-child(3) {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: yellow;
+  background-color: #efef96;
+}
+
+.homewor_3 {
+  display: flex;
+}
+.homewor_3 li {
+  width: 100%;
+  background-color: #b1e9b1;
+  margin-bottom: 10px;
+  border: solid 1px #fff;
+}
+.homewor_3 .col-6 {
+  width: 50%;
+}
+.homewor_3 .col-4 {
+  width: 33.3333%;
+}
+.homewor_3 .col-3 {
+  width: 25%;
+}/*# sourceMappingURL=style.css.map */

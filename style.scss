@@ -1,0 +1,127 @@
+//@use문법
+@use 'reset';
+//but 콤파일이 필요 없으니 이름 앞에 _를 붙여줌으로써 콤파일을 방지시켜준다.
+
+//다른 css를 가져와서 붙여놓는것
+
+$메인컬러 : #000000;
+$기본사이즈 : 20px;
+
+body{
+    background-color: $메인컬러;
+    font-size: $기본사이즈 - 5px;
+    color: reset.$리셋파일의변수;
+}
+
+// nesting 문법
+.main-bg{
+    h4{
+        color: #fff;
+    }
+    button{
+        display: inline-block;
+    }
+}
+//@extend 문법
+//버튼이 여러개 필요. class를 복사해서 쓸때 사용하면 좋음
+%btn{
+    width: 200px;
+    height: 200px;
+    height: 20px;
+}
+//==>임시클래스라고 보면된다. 진짜 css 에는 나타나지 않음
+.btn-green{
+    @extend %btn;
+    background-color: green;
+    &:hover{
+        background-color: #fff
+    }
+}
+.btn-red{
+    @extend %btn;
+    background-color: red;
+}
+.btn-blue{
+    @extend %btn;
+    background-color: blue;
+}
+
+//@mixin 문법
+@mixin 작명($a){
+    font-size: $a;
+    letter-spacing: -1px;
+}
+h2{
+    @include 작명(30px)
+}
+h3{
+    @include 작명(20px)
+}
+h4{
+    @include 작명(10px)
+}
+
+
+.homework_1{
+    border: solid 1px #ccc;
+    width: 100px;
+    li{
+        list-style: none;
+        padding:15px;
+        background-color: #fffd;
+        border-bottom:solid 1px #ccc;
+        &:hover{
+            background-color: blue;
+            color:#fff;
+        }
+    }
+    .active{
+        background-color: blue;
+        color: #fff;
+    }
+    
+    &:last-child{
+        border-bottom: nopne;
+    }
+}
+@mixin alert($a, $b){
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: $a;
+    background-color: $b;
+
+}
+.homewor_2{
+    li{
+        &:nth-child(1){
+            @include alert(green, #b1e9b1)
+        }
+        &:nth-child(2){
+            @include alert(blue, #8787fd)
+        }
+        &:nth-child(3){
+            @include alert(yellow, #efef96)
+        }
+    }
+}
+.homewor_3{
+    display: flex;
+    li{
+        width: 100%;
+        background-color: #b1e9b1;
+        margin-bottom: 10px;
+        border: solid 1px #fff;
+    }
+    .col-6{
+        width: 50%;
+    }
+    .col-4{
+        width: 33.3333%;
+    }
+    .col-3{
+        width: 25%;
+    }
+}
